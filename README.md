@@ -1,47 +1,22 @@
-# End-to-End Monitoring & Observability Platform (Prometheus + Grafana)
+# End-to-End Observability Platform
 
-This project is a simple but complete observability setup built around Prometheus and Grafana. It is designed to monitor Linux-based systems and collect basic infrastructure metrics in a containerized environment.
+This project demonstrates a complete monitoring stack using Prometheus and Grafana for Linux infrastructure observability.
 
-The goal of this setup is to simulate a real-world monitoring stack that can be used for small to medium Linux infrastructures.
+## Stack
 
----
+- Prometheus
+- Grafana
+- Node Exporter
+- Docker Compose
 
-## What this project includes
+## Features
 
-- Prometheus for metrics collection and storage  
-- Grafana for visualization and dashboards  
-- Node Exporter for system-level metrics  
-- Docker Compose for easy deployment  
+- System metrics monitoring (CPU, Memory, Disk)
+- Alerting rules for high CPU usage
+- Pre-configured Grafana dashboards
+- Scalable container-based architecture
 
----
-
-## Why this setup
-
-In most environments, having visibility over system health is critical. This setup focuses on:
-
-- Basic infrastructure monitoring
-- CPU, memory, disk, and system load metrics
-- Simple alerting rules (expandable later)
-- Easy local deployment using Docker
-
----
-
-## Architecture
-
-The setup is straightforward:
-
-- Node Exporter exposes system metrics
-- Prometheus scrapes and stores metrics
-- Grafana visualizes the data
-
-Everything runs as Docker containers.
-
----
-
-## How to run it
-
-Clone the repository:
+## Run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/observability-platform-prometheus-grafana.git
-cd observability-platform-prometheus-grafana
+docker compose up -d
